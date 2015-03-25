@@ -1,0 +1,37 @@
+Han Xiao
+03/9/2015
+
+package name: gazebo_ros_my_robot_description gazebo_ros_my_robot_gazebo gazebo_my_robot_control
+
+command: 
+
+roslaunch gazebo_ros_my_robot_gazebo myrobot_plugin.launch
+#this starts the followings
+#A gazebo world with sun, ground and gravity.
+#A robot (Loaded by spawn_urdf method).
+#Rviz visualization of the robot.
+#differential driver plugin
+#joints controller plugin
+#laser plugin
+
+
+roslaunch gazebo_my_robot_control myrobot_control.launch
+#this starts the joints controller
+
+
+rostopic pub /robot_hanchenhao/joint1_position_controller/command std_msgs/Float64 "data: 0.3" 
+rostopic pub /robot_hanchenhao/joint2_position_controller/command std_msgs/Float64 "data: 0.3" 
+#the following commands will move robot hands
+
+
+
+rostopic pub /cmd_vel geometry_msgs/Twist "linear: 
+  x: 1.0
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0" 
+ #this will drive the robot to move
+

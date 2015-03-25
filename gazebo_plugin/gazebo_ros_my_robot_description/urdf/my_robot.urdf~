@@ -1,0 +1,383 @@
+<robot name="robot_hanchenhao2">
+
+
+  <link name="base_link">
+
+    <collision> 
+      <geometry>
+        <box size="1.0 0.8 0.2"/>
+      </geometry>
+    </collision>
+
+    <visual> 
+      <geometry>
+        <box size="1.0 0.8 0.2"/>
+      </geometry>
+      <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <link name="body_link">
+
+    <collision>
+      <geometry>
+        <cylinder length="1.8" radius="0.30"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <geometry>
+        <cylinder length="1.8" radius="0.30"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="body_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <link name="wheel_left_link">
+
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.2" radius="0.40"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.2" radius="0.40"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="wheel_left_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <link name="wheel_right_link" >
+
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.2" radius="0.40"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.2" radius="0.40"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="wheel_right_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <link name="caster_link">
+
+    <collision>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+    <surface>
+      <friction>
+                <ode>
+                  <mu>0</mu>
+                  <mu2>0</mu2>
+                  <slip1>1.0</slip1>
+                  <slip2>1.0</slip2>
+                </ode>
+              </friction>
+    </surface>
+
+  </link>
+
+  <gazebo reference="caster_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <link name="caster_base_link">
+
+    <collision>
+       <geometry>
+          <cylinder length="0.2" radius="0.1"/>
+      </geometry>
+    </collision>
+
+    <visual>
+       <geometry>
+          <cylinder length="0.2" radius="0.1"/>
+      </geometry>
+      <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+  </link>
+
+  <gazebo reference="caster_link">
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <link name="hand_left_link" >
+
+    <collision>
+      <origin xyz="0.25 -0.1 0" rpy="0 1.57 0" />
+      <geometry>
+        <box size="0.1 0.2 0.6"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.25 -0.1 0" rpy="0 1.57 0" />
+      <geometry>
+        <box size="0.1 0.2 0.6"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.25 -0.1 0" rpy="0 1.57 0" />
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="hand_left_link">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <link name="hand_right_link">
+
+    <collision>
+      <origin xyz="0.25 0.1 0" rpy="0 1.57 0" />
+      <geometry>
+        <box size="0.1 0.2 0.6"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.25 0.1 0" rpy="0 1.57 0" />
+      <geometry>
+        <box size="0.1 0.2 0.6"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.25 0.1 0" rpy="0 1.57 0" />
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="hand_right_link">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <link name="head_link">
+
+    <collision>
+      <geometry>
+        <sphere radius="0.4"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <geometry>
+        <sphere radius="0.4"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+
+    <inertial>
+      <mass value="1"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+
+  </link>
+
+  <gazebo reference="head_link">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+  <joint name="joint1" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_link"/>
+    <origin xyz="0 0.5 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0"/>
+    <dynamics damping="0.7" friction="0.0"/>
+  </joint>
+
+  <joint name="joint2" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_link"/>
+    <origin xyz="0 -0.5 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0"/>
+    <dynamics damping="0.7" friction="0.0"/>
+  </joint>
+
+  <joint name="joint3" type="fixed">
+    <parent link="base_link"/>
+    <child link="body_link"/>
+    <origin xyz="0 0 1" rpy="0 0 0" />
+  </joint>
+
+  <joint name="joint4" type="continuous">
+    <parent link="body_link"/>
+    <child link="hand_left_link"/>
+    <origin xyz="0 0.5 0.2" rpy="0 0 0" />
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7" friction="0.0"/>
+  </joint>
+
+  <joint name="joint5" type="continuous">
+    <parent link="body_link"/>
+    <child link="hand_right_link"/>
+    <origin xyz="0 -0.5 0.2" rpy="0 0 0" />
+    <axis xyz="0 -1 0"/>
+    <dynamics damping="0.7" friction="0.0"/>
+  </joint>
+
+  <joint name="joint6" type="prismatic">
+    <parent link="body_link"/>
+    <child link="head_link"/>
+    <limit effort="10" lower="-0.1" upper="0.1" velocity="10"/>
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.7" friction="0.0"/>
+  </joint>
+
+  <joint name="joint7" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_base_link"/>
+    <origin xyz="0.4 0 -0.2" rpy="0 0 0" />
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="joint8" type="fixed">
+    <parent link="caster_base_link"/>
+    <child link="caster_link"/>
+    <origin xyz="0 0 -0.1" rpy="0 0 0" />
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <gazebo reference="caster_link">
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="caster_base_link">
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="head_link">
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="body_link">
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+</robot>

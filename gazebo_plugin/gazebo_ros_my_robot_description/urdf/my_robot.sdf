@@ -1,0 +1,546 @@
+<sdf version='1.4'>
+  <model name='robot_hanchenhao'>
+    <link name='base'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.2 0 0.525 0 -0 0</pose>
+        <mass>4</mass>
+        <inertia>
+          <ixx>5.0675</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.3</ixz>
+          <iyy>5.2275</iyy>
+          <iyz>0</iyz>
+          <izz>4.16</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_collision_base_link'>
+        <pose>0 0 0.4 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1 0.8 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_collision_body_link'>
+        <pose>0 0 1.4 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>1.8</length>
+            <radius>0.3</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_collision_caster_base_link'>
+        <pose>-0.4 0 0.2 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_collision_caster_link'>
+        <pose>-0.4 0 0.1 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.1</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_visual_base_link'>
+        <pose>0 0 0.4 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1 0.8 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_visual_body_link'>
+        <pose>0 0 1.4 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>1.8</length>
+            <radius>0.3</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_visual_caster_base_link'>
+        <pose>-0.4 0 0.2 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_visual_caster_link'>
+        <pose>-0.4 0 0.1 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.1</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <link name='head_link'>
+      <pose>0 0 2.4 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='head_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.4</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='head_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.4</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Yellow</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='joint_head' type='prismatic'>
+      <child>head_link</child>
+      <parent>base</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.1</lower>
+          <upper>0.1</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='hand_left_link'>
+      <pose>0 0.5 1.6 0 -0 0</pose>
+      <inertial>
+        <pose>0.25 -0.1 0 0 1.57 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='hand_left_link_collision'>
+        <pose>0.25 -0.1 0 0 1.57 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.2 0.6</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='hand_left_link_visual'>
+        <pose>0.25 -0.1 0 0 1.57 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.2 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Yellow</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='joint_left_hand' type='revolute'>
+      <child>hand_left_link</child>
+      <parent>base</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='hand_right_link'>
+      <pose>0 -0.5 1.6 0 -0 0</pose>
+      <inertial>
+        <pose>0.25 0.1 0 0 1.57 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='hand_right_link_collision'>
+        <pose>0.25 0.1 0 0 1.57 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.2 0.6</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='hand_right_link_visual'>
+        <pose>0.25 0.1 0 0 1.57 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.2 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Yellow</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='joint_right_hand' type='revolute'>
+      <child>hand_right_link</child>
+      <parent>base</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_left_link'>
+      <pose>0 0.5 0.4 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_left_link_collision'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.4</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='wheel_left_link_visual'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.4</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='joint_left_wheel' type='revolute'>
+      <child>wheel_left_link</child>
+      <parent>base</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_right_link'>
+      <pose>0 -0.5 0.4 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_right_link_collision'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.4</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='wheel_right_link_visual'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.4</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='joint_right_wheel' type='revolute'>
+      <child>wheel_right_link</child>
+      <parent>base</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+    </joint>
+  </model>
+</sdf>

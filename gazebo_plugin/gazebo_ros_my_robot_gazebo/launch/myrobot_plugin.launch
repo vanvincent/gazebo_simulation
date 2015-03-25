@@ -1,0 +1,13 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find gazebo_ros_my_robot_gazebo)/worlds/myrobot.world"/>
+  </include>
+  <!-- Spawn a robot into Gazebo -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find gazebo_ros_my_robot_description)/urdf/my_robot_plugin.xacro'" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -z 0.5 -model robot_hanchenhao -param robot_description" />
+   
+  <!-- Open Rviz visualization -->
+  <include file="$(find gazebo_ros_my_robot_gazebo)/launch/my_robot_plugin_rviz.launch"/>
+
+</launch>

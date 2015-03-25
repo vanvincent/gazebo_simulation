@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"wheel_left_link" [label="wheel_left_link"];
+"wheel_right_link" [label="wheel_right_link"];
+"body_link" [label="body_link"];
+"hand_left_link" [label="hand_left_link"];
+"hand_right_link" [label="hand_right_link"];
+"head_link" [label="head_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "joint1" [label="xyz: 0 1 0 \nrpy: 0 -0 0"]
+"joint1" -> "wheel_left_link"
+"base_link" -> "joint2" [label="xyz: 0 -1 0 \nrpy: 0 -0 0"]
+"joint2" -> "wheel_right_link"
+"base_link" -> "joint3" [label="xyz: 0 0 3 \nrpy: 0 -0 0"]
+"joint3" -> "body_link"
+"body_link" -> "joint4" [label="xyz: 0 0.5 0 \nrpy: 0 -0 0"]
+"joint4" -> "hand_left_link"
+"body_link" -> "joint5" [label="xyz: 0 -0.5 0 \nrpy: 0 -0 0"]
+"joint5" -> "hand_right_link"
+"body_link" -> "joint6" [label="xyz: 0 0 3 \nrpy: 0 -0 0"]
+"joint6" -> "head_link"
+}

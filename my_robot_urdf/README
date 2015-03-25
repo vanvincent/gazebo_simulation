@@ -1,0 +1,18 @@
+Han Xiao
+02/20/2015
+
+package name: my_robot_urdf
+
+command: 
+
+roslaunch my_robot_urdf my_robot.launch
+
+#this starts the robot state publiser, joy stick control node, and rviz with configuration.
+#Control the robot using a joy stick same as that in last week.
+#Control lookup table:
+	X vel proportional to left joystick fore and aft
+    Y vel proportional to left joystick left and right
+    Z vel proportional to Y and A butons
+    rotation vel about X proportional to X and B butons
+    rotation vel about Y proportional to right joysticj fore and aft
+    rotation vel about Z proportional to right joysticj left and right
